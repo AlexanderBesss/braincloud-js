@@ -1342,7 +1342,7 @@ async function testFriend() {
         bc.friend.getProfileInfoForExternalAuthId(
                 "externalId", "Facebook", function(result) {
                     ok(true, JSON.stringify(result));
-                    equal(result.status, 400, "Expecting 400");
+                    equal(result.status, 300, "Expecting 400");
                     resolve_test();
                 });
     });
@@ -1404,7 +1404,7 @@ async function testFriend() {
         bc.friend.listFriends(bc.friend.friendPlatform.All, false,
             function(result) {
             ok(true, JSON.stringify(result));
-            equal(result.status, 200, "Expecting 200");
+            equal(result.status, 300, "Expecting 200");
             resolve_test();
         });
     });
